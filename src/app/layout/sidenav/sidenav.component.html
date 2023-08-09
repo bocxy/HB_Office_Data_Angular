@@ -1,0 +1,86 @@
+ <mat-toolbar class="example-toolbar bg-white">
+    <button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+    <div class="ml-auto">
+      <div class="d-flex justify-content-center align-items-center">
+        <div>
+          <p class="mb-0">{{ currentDate | date: 'medium' }}</p>
+        </div>
+        <div class="search-icon mx-2">
+          <i class="dw dw-search2"></i>
+          <input type="text" class="form-control search-input" placeholder="Search Here" />
+        </div>
+        <div class="mx-1">
+          <button mat-icon-button>
+            <mat-icon>notifications</mat-icon>
+          </button>
+        </div>
+        <div class="mx-1">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>person</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+   <mat-sidenav-container class="example-container" autosize>
+    <mat-sidenav *ngIf="isExpanded || isShowing" #sidenav class="example-sidenav" mode="side" opened="true"
+      (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+      <mat-nav-list>
+        <mat-list-item>
+          <div class="d-flex align-items-center text-white" *ngIf="isExpanded || isShowing">
+            <div><mat-icon mat-list-icon>home</mat-icon></div>
+            <div class="px-4">
+              <mat-label>Home</mat-label>
+            </div>
+            </div>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="d-flex align-items-center text-white" *ngIf="isExpanded || isShowing">
+            <div><mat-icon mat-list-icon>folder</mat-icon></div>
+            <div class="px-4">
+              <mat-label>Office Data</mat-label>
+            </div>
+            <!-- Add the three options below -->
+            <div class="px-4">
+              <mat-menu #homeMenu="matMenu">
+                <button mat-menu-item routerLink="/home-circle">Circle Office</button>
+                <button mat-menu-item routerLink="/home-division">Division Office</button>
+                <button mat-menu-item routerLink="/home-head">Head Office</button>
+              </mat-menu>
+              <button mat-icon-button [matMenuTriggerFor]="homeMenu">
+                <mat-icon>expand_more</mat-icon>
+              </button>
+            </div>
+            <!-- End of added code -->
+          </div>
+        </mat-list-item>
+        <mat-list-item>
+          <div class="d-flex align-items-center text-white" *ngIf="isExpanded || isShowing">
+            <div><mat-icon mat-list-icon>logout</mat-icon></div>
+            <div class="px-4">
+              <div routerLink=" ">Logout</div>
+            </div>
+          </div>
+        </mat-list-item>
+      </mat-nav-list>
+      </mat-sidenav>
+
+    <div class="example-sidenav-content">
+      <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>

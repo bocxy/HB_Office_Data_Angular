@@ -1,0 +1,91 @@
+<div class="example-sidenav-content">
+  <div class="col-12">
+    <br>
+    <br>
+    <h1 style="font-weight: 800;">View Circle Office</h1>
+    <br>
+    <form *ngIf="data.n_ID">
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark">Circle Code</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.v_Circle_Code}}" disabled>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark">Circle Name</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.v_Circle_Name}}" disabled>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark" for="v_Type_Of_Circle">Type of Circle</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <mat-select  type="text" class="form-control" value="{{data.v_Type_Of_Circle}}"  disabled>
+            <mat-option value="CE01" >CE01</mat-option>
+            <mat-option value="CE02">CE02</mat-option>
+            <mat-option value="CE03">CE03</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-4">
+        <label class="text-dark" for="v_Circle_Place">Circle Place</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.v_Circle_Place}}"  disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <label class="text-dark" for="v_Address">Address</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.v_Address}}"  disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <label class="text-dark" for="n_Pincode">Pincode</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.n_Pincode}}"  disabled>
+        </mat-form-field>
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark" for="n_Phone">Phone</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.n_Phone}}" disabled>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark" for="v_Email">Email</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput  type="text" class="form-control" value="{{data.v_Email}}"  disabled>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <button mat-raised-button  style="color: #470A3C; font-weight: bold;width: 150px;"routerLink="/home-circle">Discard</button>
+      &nbsp;&nbsp;&nbsp;
+      <!-- <button mat-raised-button style="background-color:#470A3C;color: white; font-weight: bold;width: 150px;"  ></button> -->
+
+
+    </div>
+  </div>
+</div>
+

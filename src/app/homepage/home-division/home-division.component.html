@@ -1,0 +1,96 @@
+<div class="example-sidenav-content">
+  <div class="row" style="gap: 22rem;">
+  <div class="col-4"><h1 style="font-weight: 800;">Office Data</h1></div>
+  <div class="col-4"><button mat-flat-button
+    style="color:black;"
+    ngxExportAs="xlsx" fileName="report"
+    (click)="exportExcel()"><mat-icon>download</mat-icon>Export to excel</button></div>
+
+   </div>
+    <br>
+    <div class="containertab" style="background-color: white;width:1300px;padding: 20px;">
+      <div class="row" style="display: flex; gap: 15rem;">
+        <div class="col-4">
+          <div class="section-b">
+            <input class="input" type="text" name="Search" placeholder="Search...">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row" style="justify-content:center;gap: 15rem;">
+            <div class="col-2 me-3">
+              <mat-form-field appearance="outline">
+                <mat-label>Add New Office</mat-label>
+                <mat-select #officeSelect>
+                  <mat-option value="circleoffice" routerLink="/add-circle-office" disabled>Circle office</mat-option>
+                  <mat-option value="divisionoffice" routerLink="/add-division-office" selected>Division Office</mat-option>
+                  <mat-option value="headoffice" routerLink="/add-head-office" disabled>Head Office</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <table mat-table [dataSource]="dataSource" class="schemes-table">
+
+      <ng-container matColumnDef="SNo">
+          <th mat-header-cell *matHeaderCellDef> S.No </th>
+          <td mat-cell *matCellDef="let response; index as i"> {{ i + 1 }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="v_Division_Code">
+          <th mat-header-cell *matHeaderCellDef> Office Code </th>
+          <td mat-cell *matCellDef="let response"> {{ response?.v_Division_Code }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="v_Division_Name">
+        <th mat-header-cell *matHeaderCellDef> Office Name </th>
+        <td mat-cell *matCellDef="let response"> {{ response?.v_Division_Name }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="v_Division_Place">
+          <th mat-header-cell *matHeaderCellDef> Office Place </th>
+          <td mat-cell *matCellDef="let response"> {{ response?.v_Division_Place }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="v_Address">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let response"> {{ response?.v_Address }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="n_Pincode">
+          <th mat-header-cell *matHeaderCellDef> Pincode </th>
+          <td mat-cell *matCellDef="let response"> {{ response?.n_Pincode }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="n_Phone">
+          <th mat-header-cell *matHeaderCellDef> Phone </th>
+          <td mat-cell *matCellDef="let response"> {{ response?.n_Phone }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="v_Email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let response"> {{ response?.v_Email }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let response; let i = index;" class="action-icons">
+            <div class="displayicon">
+              <mat-icon style="font-size: 18px;cursor:pointer" matTooltip="Edit" [routerLink]="['/edit-division-office',response.n_ID]" >edit</mat-icon>
+              <mat-icon style="font-size: 18px;cursor:pointer;color:red" matTooltip="Delete" (click)="Delete( response.n_ID )">delete</mat-icon>
+              <mat-icon style="font-size: 18px;cursor:pointer;color:peru" matTooltip="View" [routerLink]="['/view-division-office', response.n_ID]">visibility</mat-icon>
+
+          </div>
+          </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+
+
+</div>

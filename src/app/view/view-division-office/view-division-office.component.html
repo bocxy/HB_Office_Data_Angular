@@ -1,0 +1,84 @@
+<div class="example-sidenav-content">
+  <div class="col-12">
+    <br>
+    <br>
+    <h1 style="font-weight: 800;">View Division Office</h1>
+    <br>
+    <form *ngIf="data.n_ID">
+      <div class="row">
+        <div class="col-4">
+          <label class="text-dark">Division Code</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput  type="text"  class="form-control" value="{{data.v_Division_Code}}" disabled>
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <label class="text-dark">Circle Code</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput  type="text"  class="form-control" value="{{data.v_Select_Circle}}" disabled>
+          </mat-form-field>
+        </div>
+
+        <div class="col-4">
+          <label class="text-dark">Division Name</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="text" class="form-control" value="{{data.v_Division_Name}}" disabled>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-4">
+          <label class="text-dark">Division Place</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="text" value="{{data.v_Division_Place}}" class="form-control"  disabled>
+          </mat-form-field>
+        </div>
+
+        <div class="col-4">
+          <label class="text-dark">Address</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="text" value="{{data.v_Address}}" class="form-control"  disabled>
+          </mat-form-field>
+        </div>
+
+        <div class="col-4">
+          <label class="text-dark">Pincode</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="text" value="{{data.n_Pincode}}" class="form-control"  disabled>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <label class="text-dark">Email</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="text" value="{{data.v_Email}}" class="form-control"  disabled>
+          </mat-form-field>
+        </div>
+
+        <div class="col-4">
+          <label class="text-dark">Phone</label>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput type="text" value="{{data.n_Phone}}" class="form-control" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <button mat-raised-button style="color: #470A3C; font-weight: bold;width: 150px;" routerLink="/home-division">Discard</button>
+      &nbsp;&nbsp;&nbsp;
+      <!-- <button mat-raised-button color="#470A3C" style="background-color:#470A3C;color: white; font-weight: bold;width: 150px;" (click)="getDivisionOfficeData(id)">Update</button> -->
+    </div>
+  </div>
+</div>

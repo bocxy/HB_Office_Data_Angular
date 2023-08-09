@@ -1,0 +1,111 @@
+
+@media only screen and (max-width: 992px) {
+  .has-search .form-control {
+    width: 100%;
+  }
+
+  .has-search .form-control-feedback {
+    left: calc(50% - 33px/2 - 50%);
+  }
+
+  .select {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .btn-light {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .has-search .form-control {
+    padding-left: 1.375rem;
+    width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .select {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .btn-light {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .has-search .form-control-feedback {
+    font-size: 1.5rem;
+    top: 13px;
+    left: calc(50% - 33px/2 - 110px);
+  }
+}
+
+::ng-deep .mat-mdc-unelevated-button:not(:disabled) {
+  height: 3.5rem;
+  border-radius: 8px;
+  position: relative;
+}
+.section-b .input {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f3f9;
+  width: 100%;
+  line-height: 24px;
+}
+.containertab{
+width: 100%;
+}
+
+
+::ng-deep .mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after, .mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+color:#3FB8DE;
+}
+.displayicon {
+display: flex;
+}
+
+
+th
+{
+  background-color: #66023C;
+  padding: 7px;
+  border : 1px solid rgb(136, 134, 134);
+
+}
+
+table tr:nth-child(odd) td{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border : 1px solid rgb(136, 134, 134);
+  border-radius: 50px;
+}
+table tr:nth-child(even) td{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border : 1px solid rgb(136, 134, 134);
+
+  background-color: #f2f2f2;
+}
+td a i {
+  padding-right: 15px;
+}
+
+table th {
+  background-color: #50163C;
+  color:white;
+  padding:15px;
+  border-radius: 1px;
+  font-weight: bold;
+}
+
+.action-icons a span {
+  font-size: 1.2rem;
+}
+.schemes-table th {
+  background-color: #470A3C !important;
+  color: #F6F4EB;
+}

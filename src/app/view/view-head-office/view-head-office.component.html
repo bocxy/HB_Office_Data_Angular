@@ -1,0 +1,75 @@
+<div class="example-sidenav-content">
+  <div class="col-12">
+    <br>
+    <br>
+    <h1 style="font-weight: 800;">View Head Office</h1>
+    <br>
+    <form *ngIf="data.n_ID">
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark">Office Code</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control" value="{{data.v_Office_Code}}" disabled>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark" >Office Name</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control"  value="{{data.v_HeadOffice_Name}}" disabled>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark" >Office Place</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control"  value="{{data.v_HeadOffice_Place}}" disabled>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark" >Address</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control"  value="{{data.v_Address}}" disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <label class="text-dark" >Pincode</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control"  value="{{data.n_Pincode}}" disabled>
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <label class="text-dark">Phone</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control" value="{{data.n_Phone}}" disabled>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark">Email</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput type="text" class="form-control"  value="{{data.v_Email}}" disabled>
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <button mat-raised-button  style="color: #470A3C; font-weight: bold;width: 150px;"routerLink="/home-head">Discard</button>
+      &nbsp;&nbsp;&nbsp;
+      <!-- <button mat-raised-button color="#66023C"style="background-color:#470A3C;color: white; font-weight: bold;width: 150px;"(click)="saveHeadOffice()" >Update</button> -->
+
+
+    </div>
+  </div>
+</div>

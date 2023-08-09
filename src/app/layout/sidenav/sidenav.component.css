@@ -1,0 +1,71 @@
+.example-container {
+    height: 800px;
+    border: 1px solid white;
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.example-sidenav {
+    user-select: none;
+    background-color: #470A3C;
+    color: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+}
+
+.menu-button.rotated {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+}
+
+.submenu.expanded {
+    transform: scaleY(1);
+}
+
+
+.search-icon {
+    position: relative;
+}
+
+.search-icon .dw-search2 {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-input {
+    padding-left: 40px;
+}
+
+/* .custom-toolbar {
+  padding: 55px;
+} */
+
+div img {
+  width: 300px;
+  height: auto;
+}
+
+

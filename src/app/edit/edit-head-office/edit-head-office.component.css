@@ -1,0 +1,47 @@
+
+
+.search-icon {
+  position: relative;
+}
+
+.search-icon .dw-search2 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search-input {
+  padding-left: 30px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* .box {
+  width: 30%;
+  max-width: 1000px;
+  height: 56px;
+  background: rgba(217, 217, 217, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 20px;
+} */
+.example-full-width{
+  width: 100% ;
+}
+::ng-deep .example-full-width .mdc-text-field--outlined {
+  background: rgba(217, 217, 217, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+::ng-deep .example-full-width .mat-form-field-outline{
+  border: none !important;
+}
+/* ::ng-deep .example-full-width .mdc-text-field__input {
+  color: white !important;
+} */

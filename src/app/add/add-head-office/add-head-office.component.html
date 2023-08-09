@@ -1,0 +1,75 @@
+<div class="example-sidenav-content">
+  <div class="col-12">
+    <br>
+    <br>
+    <h1 style="font-weight: 800;">Add Head Office</h1>
+    <br>
+    <form [formGroup]="myForm">
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark" for="v_Office_Code">Office Code</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="v_Office_Code">
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark" for="v_HeadOffice_Name">Office Name</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="v_HeadOffice_Name">
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <label class="text-dark" for="v_HeadOffice_Place">Office Place</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="v_HeadOffice_Place">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark" for="v_Address">Address</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="v_Address">
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <label class="text-dark" for="n_Pincode">Pincode</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="n_Pincode">
+        </mat-form-field>
+      </div>
+
+      <div class="col-4">
+        <label class="text-dark" for="n_Phone">Phone</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="n_Phone">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label class="text-dark" for="v_Email">Email</label>
+        <mat-form-field appearance="outline" class="example-full-width">
+          <input matInput formControlName="v_Email">
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="display: flex; justify-content: center;">
+      <button mat-raised-button  style="color: #470A3C; font-weight: bold;width: 150px;"routerLink="/home-head">Discard</button>
+      &nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="#66023C"style="background-color:#470A3C;color: white; font-weight: bold;width: 150px;"(click)="saveHeadOffice()" >Create</button>
+
+
+    </div>
+  </div>
+</div>
